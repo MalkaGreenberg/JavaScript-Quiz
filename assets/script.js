@@ -71,7 +71,7 @@ var savedScores = $("#savedScores");
 
 var secondsLeft = 76;
 var score = 0;
-
+var timesRun = 0;
 
 // timer running the whole time. 
 var setTime = function() {
@@ -96,17 +96,9 @@ var setTime = function() {
   
     }, 1000);
 }
-var timesRun = 0;
 
 var startQuiz = function(){
-    // if(secondsLeft == 0 ){
-    //     score = secondsLeft; // sets the score
-    //     secondsLeft = 77; // stops the timer
-    //     quiz.css("display", "none");
-    //     finalScore.css("display", "block");
-    //     $("#finalScore").text(`Your final score is: ${score}.`);
-    //     return;
-    // }
+
     if(timesRun == 0 ){ // runs the timer only by the first question.
         setTime();
         console.log(secondsLeft);
@@ -119,7 +111,6 @@ var startQuiz = function(){
     questionEl.text(Questions[currQuestion].q);
     answersEl.empty();
     
-
     for (var i = 0; i < Questions[currQuestion].a.length; i++){
         var btn = `<li><button class="chosenAnswer" data-isCorrect= "${Questions[currQuestion].a[i].isCorrect}"> ${Questions[currQuestion].a[i].text } </button></li>`;
         answersEl.append(btn);
@@ -129,15 +120,12 @@ var startQuiz = function(){
 
     var chosen = answersEl.children('li').children('button');
     
-    
-    
     chosen.on('click', function(){
         
         //console.log($(this).attr("data-isCorrect"));
         var answer = $(this).attr("data-isCorrect");
 
         //if the $(this).attr("data-isCorrect") is true then set $(".answerIsCorrect") to correct
-        
         if(answer === 'true'){
             answerIsCorrect.empty();
             answerIsCorrect.append("Correct");
@@ -150,7 +138,6 @@ var startQuiz = function(){
 
         }
         
-       
         //after the last question, go to final score page. and return-leave the function.
         if(currQuestion >= Questions.length){
             if(secondsLeft < 0 ){
@@ -171,16 +158,8 @@ var startQuiz = function(){
    
 };
 
-
-start.on('click', startQuiz);
-
-//put onClick listener for the submitBtn 
-//this function saves it to the local storage as an object. 
-// to access it iterate through getScore[i].username
-// at i get the username and score and put it into a string like MG-22.
-// add to a list #savedScores in the highScore element
-
 var displayScores = function(){
+    $(".link").css("display", "none");
     var scoreCard = "";
 
     var getScore = JSON.parse(localStorage.getItem("highScores"))||[];
@@ -220,6 +199,7 @@ var saveToStorage = function(event){
     
 }
 
+start.on('click', startQuiz);
 $("#submitBtn").on("click", saveToStorage);
 
 $(".link").on("click", function(){
