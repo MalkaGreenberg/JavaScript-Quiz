@@ -4,7 +4,7 @@
 A timed multiple choice quiz about JavaScript. 
 
 ## Installation
-link to deployed application: https://malkagreenberg.github.io/JavaSript-Quiz
+link to deployed application: https://malkagreenberg.github.io/JavaScript-Quiz/
 
 ## Usage
 When the user clicks on the ‘Start’ button the first question comes up on the screen and the timer begins. 
