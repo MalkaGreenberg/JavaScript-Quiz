@@ -21,10 +21,10 @@ The user has the option to clear the high scores or go back to the first page an
 
 Click on the ‘view high scores’ found in the top left corner of the page to see the high scores page.
 
-![screenshot](assets/screenshot-1.png)   
-![screenshot](assets/screenshot-2.png)  
-![screenshot](assets/screenshot-3.png)   
-![screenshot](assets/screenshot-4.png)   
+![screenshot](assets/images/screenshot-1.png)   
+![screenshot](assets/images/screenshot-2.png)  
+![screenshot](assets/images/screenshot-3.png)   
+![screenshot](assets/images/screenshot-4.png)   
 
 
 ## Credits
