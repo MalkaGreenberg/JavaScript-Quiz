@@ -160,6 +160,7 @@ var startQuiz = function(){
 
 var displayScores = function(){
     $(".link").css("display", "none");
+    timeEl.css("display", "none");
     var scoreCard = "";
 
     var getScore = JSON.parse(localStorage.getItem("highScores"))||[];
