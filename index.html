@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>🤓 Javascript Quiz</title>
+</head>
+<body>
+    <h3 class="time"></h3>
+    <a class="link" href="#highScore">View High Score</a> 
+    <main>
+        <div class="quiz">
+            <h1 id = "question" class="question"></h1>
+            <ul id = "options" class="options"></ul>
+            <p class="answerIsCorrect"></p>
+        </div>
+        <div class="start">
+            <h1>⏳Coding Quiz Challenge⌛</h1>
+            <p>Try to answer the following questions within the time limit.
+                Keep in mind that incorrect answers will penalize your score/time 
+                by ten seconds!
+            </p>
+            <button id = "start-btn" class = "btn start-btn">Start</button>
+        </div>
+        <div id="finalScorePage">
+            <h1>🥳 All done! 🎉</h1>
+            <h2 id="finalScore"> </h2>
+            <form>
+                <label id="label" for="initials">Enter initials: </label>
+                <input class="form" type="text" id="initials" name="initials"><br><br>
+                <input id="submitBtn" type="submit" value="Submit">
+            </form>
+            <p class="answerIsCorrect"></p>
+        </div>
+        <div id="highScore">
+            <h1>High Scores</h1>
+            <ul id="savedScores"></ul>
+            <button id="back">Go back</button>
+            <button id="clear">Clear high scores</button>
+        </div>
+    </main>
+
+
+
+  <!-- Added link to the jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Your JavaScript file -->
+  <script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>
